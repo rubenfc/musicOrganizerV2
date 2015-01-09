@@ -98,10 +98,22 @@ public class MusicOrganizer
     
     public void listMaching (String searchString)
     {
+        boolean existeUnaCancion = false;
         for (String filename : files)
         {
             if (filename.contains(searchString))
+            {
                 System.out.println(filename);
-        }        
+                existeUnaCancion = true;
+            } 
+        }
+        
+        
+        if (existeUnaCancion == false)
+        {
+            System.out.println ("error no se encuentra ningun archivo con ese nombre");
+        }
     }
+    
+  
 }
