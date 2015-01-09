@@ -115,5 +115,23 @@ public class MusicOrganizer
         }
     }
     
+      public void playMusic(String artista)
+    {
+        for (String filename : files)
+        {
+            boolean existeArtista = false;
+            if(filename.contains(artista))
+            {
+                player.playSample(filename);
+                existeArtista = true;
+            }
+            
+            if(existeArtista = false)
+            {
+                System.out.println ("eror, no hay almacenada ninguna cancion de ese artista");
+            }
+        }
+    }
+    
   
 }
